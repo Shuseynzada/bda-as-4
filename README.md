@@ -23,13 +23,13 @@ Make sure the AIS data file (`ais_data_2024-05-04.csv`) is located in the projec
 ### 3. Build the Docker Image
 
 ```bash
-docker build -t pyspark-tqdm .
+docker build -t maritime-data-analysis .
 ```
 
 ### 4. Run the Docker Container
 
 ```bash
-docker run -v ${PWD}:/app pyspark-tqdm
+docker run -v ${PWD}:/app maritime-data-analysis
 ```
 
 ## Project Structure
@@ -63,6 +63,7 @@ The script performs the following steps:
 - Ensure you have sufficient memory allocated to Docker to handle large datasets.
 - Modify the `main.py` script if needed to accommodate different data structures or additional analysis requirements.
 
-## License
-
-This project is licensed under the MIT License.
+## Ready docker image from Docker HUB (2.82GB)
+```bash
+docker push samxal/maritime-data-analysis:latest
+```
